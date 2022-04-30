@@ -7,6 +7,7 @@
 
 import UIKit
 import HealthKit
+import FirebaseAuth
 
 
     //Shared Variable
@@ -21,18 +22,26 @@ class ViewController: UIViewController {
   
     let healthPlace = HealthStore()
     var scone = "scone"
+    let currentUser = Auth.auth().currentUser?.uid
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-       
         healthPlace.accessData()
-        healthPlace.latestHeartRate()
-        healthPlace.getRestingHR()
+        
+        UserService.retrieveProfile(userId: currentUser!) { (user) in
+            self.greetingText.text = "Hi " + (user?.username)! + "!"
+            
+            
+        }
+       
+      
+  
        
         
     }
-   
+    @IBOutlet var greetingText: UILabel!
+    
     @IBAction func TestButton(_ sender: UIButton, forEvent event: UIEvent) {
 //        healthPlace.averageOfHR()
     }
@@ -40,6 +49,7 @@ class ViewController: UIViewController {
     
    
     @IBAction func changeSteps(_ sender: UIButton, forEvent event: UIEvent)  {
+       
         healthPlace.getRestingHR()
         healthPlace.latestHeartRate()
         theSteps.text = String(healthPlace.recentHeartRate)
