@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B312B9E2864048100784BFF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9D2864048100784BFF /* SignInVC.swift */; };
 		3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */; };
 		3B6A5000281B8B3100134B6E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A4FFF281B8B3100134B6E /* FirebaseAuth */; };
 		3B6A5002281B8B3100134B6E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A5001281B8B3100134B6E /* FirebaseFirestore */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B312B9D2864048100784BFF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B6A500C281CCD3F00134B6E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -65,9 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B312B6D2861732F00784BFF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3BB84AD8280B9507001BDABD = {
 			isa = PBXGroup;
 			children = (
+				3B312B9D2864048100784BFF /* SignInVC.swift */,
 				3BB84AE3280B9507001BDABD /* WinFit StoryBoard */,
 				3BB84AE2280B9507001BDABD /* Products */,
 				3BB84B1F280E5FFF001BDABD /* Frameworks */,
@@ -85,6 +95,7 @@
 		3BB84AE3280B9507001BDABD /* WinFit StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				3B312B6D2861732F00784BFF /* New Group */,
 				3BB84B1E280E5FFF001BDABD /* WinFit StoryBoard.entitlements */,
 				3BB84AF8280B98BE001BDABD /* CompetitionPageVC.swift */,
 				3BB84AE4280B9507001BDABD /* AppDelegate.swift */,
@@ -199,6 +210,7 @@
 				3B6A5011281CDCBD00134B6E /* CreateProfileViewController.swift in Sources */,
 				3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */,
 				3BB84AE9280B9507001BDABD /* ViewController.swift in Sources */,
+				3B312B9E2864048100784BFF /* SignInVC.swift in Sources */,
 				3B6A500F281CD63500134B6E /* WinFitUser.swift in Sources */,
 				3BB84AE5280B9507001BDABD /* AppDelegate.swift in Sources */,
 				3BB84B24280E6973001BDABD /* HealthKit.swift in Sources */,
