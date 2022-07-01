@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3B312B9E2864048100784BFF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9D2864048100784BFF /* SignInVC.swift */; };
+		3B312BA028640D6200784BFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9F28640D6200784BFF /* AuthManager.swift */; };
+		3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BA128640DD700784BFF /* SignUpVC.swift */; };
+		3B312BC4286517A600784BFF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BC3286517A600784BFF /* Extensions.swift */; };
+		3B312BC6286557C500784BFF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BC5286557C500784BFF /* DatabaseManager.swift */; };
+		3B312BC82867FB2000784BFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BC72867FB1F00784BFF /* TabBarController.swift */; };
+		3B312BCA2867FBA000784BFF /* CompetitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BC92867FBA000784BFF /* CompetitionVC.swift */; };
+		3B312BCC2867FBBA00784BFF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BCB2867FBBA00784BFF /* HomeVC.swift */; };
+		3B312BD0286F691F00784BFF /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */; };
 		3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */; };
 		3B6A5000281B8B3100134B6E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A4FFF281B8B3100134B6E /* FirebaseAuth */; };
 		3B6A5002281B8B3100134B6E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A5001281B8B3100134B6E /* FirebaseFirestore */; };
@@ -31,6 +39,14 @@
 
 /* Begin PBXFileReference section */
 		3B312B9D2864048100784BFF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		3B312B9F28640D6200784BFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		3B312BA128640DD700784BFF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3B312BC3286517A600784BFF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3B312BC5286557C500784BFF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		3B312BC72867FB1F00784BFF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3B312BC92867FBA000784BFF /* CompetitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionVC.swift; sourceTree = "<group>"; };
+		3B312BCB2867FBBA00784BFF /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B6A500C281CCD3F00134B6E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -70,6 +86,7 @@
 		3B312B6D2861732F00784BFF /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				3B312BC3286517A600784BFF /* Extensions.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -77,7 +94,6 @@
 		3BB84AD8280B9507001BDABD = {
 			isa = PBXGroup;
 			children = (
-				3B312B9D2864048100784BFF /* SignInVC.swift */,
 				3BB84AE3280B9507001BDABD /* WinFit StoryBoard */,
 				3BB84AE2280B9507001BDABD /* Products */,
 				3BB84B1F280E5FFF001BDABD /* Frameworks */,
@@ -97,9 +113,15 @@
 			children = (
 				3B312B6D2861732F00784BFF /* New Group */,
 				3BB84B1E280E5FFF001BDABD /* WinFit StoryBoard.entitlements */,
+				3B312BA128640DD700784BFF /* SignUpVC.swift */,
+				3B312BC92867FBA000784BFF /* CompetitionVC.swift */,
+				3B312B9F28640D6200784BFF /* AuthManager.swift */,
 				3BB84AF8280B98BE001BDABD /* CompetitionPageVC.swift */,
+				3B312BCB2867FBBA00784BFF /* HomeVC.swift */,
+				3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */,
 				3BB84AE4280B9507001BDABD /* AppDelegate.swift */,
 				3BB84AE6280B9507001BDABD /* SceneDelegate.swift */,
+				3B312B9D2864048100784BFF /* SignInVC.swift */,
 				3BB84AE8280B9507001BDABD /* ViewController.swift */,
 				3BB84AEA280B9507001BDABD /* Main.storyboard */,
 				3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */,
@@ -111,6 +133,8 @@
 				3B6A500C281CCD3F00134B6E /* UserService.swift */,
 				3B6A500E281CD63500134B6E /* WinFitUser.swift */,
 				3B6A5010281CDCBD00134B6E /* CreateProfileViewController.swift */,
+				3B312BC5286557C500784BFF /* DatabaseManager.swift */,
+				3B312BC72867FB1F00784BFF /* TabBarController.swift */,
 			);
 			path = "WinFit StoryBoard";
 			sourceTree = "<group>";
@@ -209,13 +233,21 @@
 				3B6A500D281CCD3F00134B6E /* UserService.swift in Sources */,
 				3B6A5011281CDCBD00134B6E /* CreateProfileViewController.swift in Sources */,
 				3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */,
+				3B312BC82867FB2000784BFF /* TabBarController.swift in Sources */,
 				3BB84AE9280B9507001BDABD /* ViewController.swift in Sources */,
+				3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */,
 				3B312B9E2864048100784BFF /* SignInVC.swift in Sources */,
+				3B312BCC2867FBBA00784BFF /* HomeVC.swift in Sources */,
+				3B312BC6286557C500784BFF /* DatabaseManager.swift in Sources */,
 				3B6A500F281CD63500134B6E /* WinFitUser.swift in Sources */,
 				3BB84AE5280B9507001BDABD /* AppDelegate.swift in Sources */,
+				3B312BC4286517A600784BFF /* Extensions.swift in Sources */,
+				3B312BCA2867FBA000784BFF /* CompetitionVC.swift in Sources */,
 				3BB84B24280E6973001BDABD /* HealthKit.swift in Sources */,
+				3B312BA028640D6200784BFF /* AuthManager.swift in Sources */,
 				3BB84AE7280B9507001BDABD /* SceneDelegate.swift in Sources */,
 				3BB84AF9280B98BE001BDABD /* CompetitionPageVC.swift in Sources */,
+				3B312BD0286F691F00784BFF /* CustomCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +401,13 @@
 				DEVELOPMENT_TEAM = 2232269234;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WinFit StoryBoard/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app would like to read your stuff";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app wants to access your health data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,11 +433,13 @@
 				DEVELOPMENT_TEAM = 2232269234;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WinFit StoryBoard/Info.plist";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app would like to read your stuff";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app wants to access your health data";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
