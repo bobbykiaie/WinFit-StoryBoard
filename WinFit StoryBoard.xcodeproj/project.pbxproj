@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0A2AE92881082D00B3FECD /* CompetitionHomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */; };
+		3B0A2AEB28810EDC00B3FECD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A2AEA28810EDC00B3FECD /* TestController.swift */; };
 		3B312B9E2864048100784BFF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9D2864048100784BFF /* SignInVC.swift */; };
 		3B312BA028640D6200784BFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9F28640D6200784BFF /* AuthManager.swift */; };
 		3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BA128640DD700784BFF /* SignUpVC.swift */; };
@@ -16,6 +18,12 @@
 		3B312BCA2867FBA000784BFF /* CompetitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BC92867FBA000784BFF /* CompetitionVC.swift */; };
 		3B312BCC2867FBBA00784BFF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BCB2867FBBA00784BFF /* HomeVC.swift */; };
 		3B312BD0286F691F00784BFF /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */; };
+		3B5195022882975C00465D6B /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5195012882975C00465D6B /* DateCell.swift */; };
+		3B51950428837A6000465D6B /* MetricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51950328837A6000465D6B /* MetricCell.swift */; };
+		3B5D7DE22887946600A3269F /* AddCompModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE12887946600A3269F /* AddCompModal.swift */; };
+		3B5D7DE4288B4CC400A3269F /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */; };
+		3B5D7DE6288CCDFD00A3269F /* ButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */; };
+		3B5D7DE8288D1E0B00A3269F /* CompetitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */; };
 		3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */; };
 		3B6A5000281B8B3100134B6E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A4FFF281B8B3100134B6E /* FirebaseAuth */; };
 		3B6A5002281B8B3100134B6E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A5001281B8B3100134B6E /* FirebaseFirestore */; };
@@ -38,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionHomeScreenCell.swift; sourceTree = "<group>"; };
+		3B0A2AEA28810EDC00B3FECD /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		3B312B9D2864048100784BFF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3B312B9F28640D6200784BFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3B312BA128640DD700784BFF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		3B312BC92867FBA000784BFF /* CompetitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompetitionVC.swift; sourceTree = "<group>"; };
 		3B312BCB2867FBBA00784BFF /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B5195012882975C00465D6B /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		3B51950328837A6000465D6B /* MetricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCell.swift; sourceTree = "<group>"; };
+		3B5D7DE12887946600A3269F /* AddCompModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCompModal.swift; sourceTree = "<group>"; };
+		3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProtocols.swift; sourceTree = "<group>"; };
+		3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionPage.swift; sourceTree = "<group>"; };
 		3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B6A500C281CCD3F00134B6E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -86,7 +102,16 @@
 		3B312B6D2861732F00784BFF /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				3B0A2AEA28810EDC00B3FECD /* TestController.swift */,
+				3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */,
+				3B312BCB2867FBBA00784BFF /* HomeVC.swift */,
 				3B312BC3286517A600784BFF /* Extensions.swift */,
+				3B5195012882975C00465D6B /* DateCell.swift */,
+				3B51950328837A6000465D6B /* MetricCell.swift */,
+				3B5D7DE12887946600A3269F /* AddCompModal.swift */,
+				3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */,
+				3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */,
+				3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -117,7 +142,6 @@
 				3B312BC92867FBA000784BFF /* CompetitionVC.swift */,
 				3B312B9F28640D6200784BFF /* AuthManager.swift */,
 				3BB84AF8280B98BE001BDABD /* CompetitionPageVC.swift */,
-				3B312BCB2867FBBA00784BFF /* HomeVC.swift */,
 				3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */,
 				3BB84AE4280B9507001BDABD /* AppDelegate.swift */,
 				3BB84AE6280B9507001BDABD /* SceneDelegate.swift */,
@@ -234,8 +258,12 @@
 				3B6A5011281CDCBD00134B6E /* CreateProfileViewController.swift in Sources */,
 				3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */,
 				3B312BC82867FB2000784BFF /* TabBarController.swift in Sources */,
+				3B5D7DE4288B4CC400A3269F /* HeaderCell.swift in Sources */,
 				3BB84AE9280B9507001BDABD /* ViewController.swift in Sources */,
+				3B5D7DE22887946600A3269F /* AddCompModal.swift in Sources */,
+				3B5D7DE6288CCDFD00A3269F /* ButtonProtocols.swift in Sources */,
 				3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */,
+				3B0A2AEB28810EDC00B3FECD /* TestController.swift in Sources */,
 				3B312B9E2864048100784BFF /* SignInVC.swift in Sources */,
 				3B312BCC2867FBBA00784BFF /* HomeVC.swift in Sources */,
 				3B312BC6286557C500784BFF /* DatabaseManager.swift in Sources */,
@@ -245,8 +273,12 @@
 				3B312BCA2867FBA000784BFF /* CompetitionVC.swift in Sources */,
 				3BB84B24280E6973001BDABD /* HealthKit.swift in Sources */,
 				3B312BA028640D6200784BFF /* AuthManager.swift in Sources */,
+				3B5195022882975C00465D6B /* DateCell.swift in Sources */,
+				3B51950428837A6000465D6B /* MetricCell.swift in Sources */,
 				3BB84AE7280B9507001BDABD /* SceneDelegate.swift in Sources */,
+				3B0A2AE92881082D00B3FECD /* CompetitionHomeScreenCell.swift in Sources */,
 				3BB84AF9280B98BE001BDABD /* CompetitionPageVC.swift in Sources */,
+				3B5D7DE8288D1E0B00A3269F /* CompetitionPage.swift in Sources */,
 				3B312BD0286F691F00784BFF /* CustomCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "bobbykiaie.WinFit-StoryBoard";
+				PRODUCT_BUNDLE_IDENTIFIER = "bobbykiaie.WinFit-StoryBoardT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
