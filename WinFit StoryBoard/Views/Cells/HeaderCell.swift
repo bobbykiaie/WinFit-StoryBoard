@@ -20,7 +20,8 @@ class HeaderCell: UICollectionReusableView {
     let heading: UILabel = {
         var label = UILabel()
         label.font = .preferredFont(forTextStyle: .headline)
-        label.text = UserDefaults.standard.value(forKey: "username")! as? String
+        label.text = "Competitions"
+//        label.text = UserDefaults.standard.value(forKey: "username")! as? String
         return label
     }()
     weak var delegate: HeaderCellDelegate?
@@ -41,7 +42,7 @@ class HeaderCell: UICollectionReusableView {
 
 extension HeaderCell {
     func configure() {
-     
+        
         addSubview(joinCompButton)
         addSubview(heading)
   
@@ -52,13 +53,15 @@ extension HeaderCell {
         joinCompButton.translatesAutoresizingMaskIntoConstraints = false
         heading.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            joinCompButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 50),
-            joinCompButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            joinCompButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/7),
+           
+          
+            joinCompButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            joinCompButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/12),
             joinCompButton.heightAnchor.constraint(equalTo: joinCompButton.widthAnchor),
-            heading.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            heading.centerYAnchor.constraint(equalTo: self.centerYAnchor)
-            
+            heading.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+
+            heading.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            joinCompButton.centerYAnchor.constraint(equalTo: heading.centerYAnchor)
         ])
 
     }

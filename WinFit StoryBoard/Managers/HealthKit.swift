@@ -20,19 +20,19 @@ class HealthStore {
         if HKHealthStore.isHealthDataAvailable() {
             
             healthStore = HKHealthStore()
+        } else {
+            return
         }
-    
-        DispatchQueue.main.async {
-            self.accessData()
+             self.accessData()
             self.getRestingHR()
             self.getSteps { num in
                
                 self.recentSteps = num
             }
-        }
-        
-        
+
     }
+    
+    
     func accessData() {
         let read = Set(
             [HKObjectType.quantityType(forIdentifier: .heartRate)!,

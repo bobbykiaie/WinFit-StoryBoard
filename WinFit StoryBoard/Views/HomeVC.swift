@@ -31,9 +31,13 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
     func buttonToAddCompModalTap() {
         let addCompController = AddCompModal()
          addCompController.delegate = self
+        addCompController.modalPresentationStyle = .popover
         present(addCompController, animated: true)
     }
-    
+//    override func viewDidLayoutSubviews() {
+//        self.view.addSubview(label)
+//        configureLabel()
+//    }
 
     let addComp = UIButton()
         
@@ -41,23 +45,11 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
         var label = UILabel()
         label.text = "scone malone"
         label.font = .preferredFont(forTextStyle: .headline)
+        label.backgroundColor = .systemBlue
         return label
     }()
     
-    func configureLabel() {
-//       addComp.configuration = .filled()
-//       addComp.configuration?.cornerStyle = .capsule
-//       addComp.configuration?.title = "+"
-////        collectionView.addSubview(addComp)
-//
-//        addComp.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//           addComp.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor),
-//           addComp.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor),
-//           addComp.widthAnchor.constraint(equalToConstant: 100),addComp.heightAnchor.constraint(equalToConstant: 40),
-//        ])
-    }
-    
+
     var competions = [ItemType]()
     func passCompData(_ data: NSArray) {
         print(data)
@@ -92,7 +84,7 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
         present(addCompController, animated: true)
     }
 
-    let healthPlace = HealthStore()
+//    let healthPlace = HealthStore()
     var heartArray = ["No Data"]
     
     var collectionView: UICollectionView!
@@ -111,18 +103,18 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
         
-        healthPlace.accessData()
-        healthPlace.getRestingHR()
-        healthPlace.getSteps { num in
-            print(num)
-        }
-       
-        DispatchQueue.main.async {
-            self.healthPlace.getSteps { [weak self] num in
-                print(num)
-        }
-            self.updateDataSource()
-        }
+//        healthPlace.accessData()
+//        healthPlace.getRestingHR()
+//        healthPlace.getSteps { num in
+//            print(num)
+//        }
+//       
+//        DispatchQueue.main.async {
+//            self.healthPlace.getSteps { [weak self] num in
+//                print(num)
+//        }
+//            self.updateDataSource()
+//        }
        
     }
     
@@ -156,8 +148,10 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
             }
         
 
+     
         configureCollectionView()
         view.addSubview(collectionView)
+       
         collectionView.delegate = self
 //        collectionView.frame = view.bounds
         dataSource = UICollectionViewDiffableDataSource<Section, ItemType>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, model) -> UICollectionViewCell in
@@ -173,6 +167,7 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
                 return cell
             case .metric(let metric):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MetricCell.reuseIdentifier, for: indexPath) as! MetricCell
+              
                 cell.metricTitle.text = metric.metricName
                 cell.metricValue.text = metric.metricValue
                 cell.metricImage.image = metric.metricLogo
@@ -189,22 +184,41 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
         }
  
         updateDataSource()
-        configureLabel()
+  
         
     }
     
+//    func configureLabel(){
+//        view.addSubview(label)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            label.leadingAnchor.constraint(equalTo: self.collectionView.leadingAnchor),
+//            label.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor),
+//                               label.heightAnchor.constraint(equalToConstant: 100),
+//
+//                               label.widthAnchor.constraint(equalTo: view.widthAnchor)
+//        ])
+//
+//
+//
+//    }
     
     
     func configureCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layoutProvider())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
+        
+    
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            
             ])
         
         collectionView.register(CompetitionHomeScreenCell.self, forCellWithReuseIdentifier: CompetitionHomeScreenCell.reuseIdentifier)
@@ -216,7 +230,7 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
     func updateDataSource() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, ItemType>()
         snapshot.appendSections(Section.allCases)
-        snapshot.appendItems([ItemType.metric(Metric(metricName: "Heart Rate", metricValue: String(healthPlace.restHR), metricLogo: UIImage(systemName: "heart")!)), ItemType.metric(Metric(metricName: "Steps", metricValue: String(healthPlace.recentSteps), metricLogo: UIImage(systemName: "figure.walk")!))], toSection: .second)
+        snapshot.appendItems([ItemType.metric(Metric(metricName: "Heart Rate", metricValue: String("50"), metricLogo: UIImage(systemName: "heart")!)), ItemType.metric(Metric(metricName: "Steps", metricValue: String("50"), metricLogo: UIImage(systemName: "figure.walk")!))], toSection: .second)
         if competions.count > 0 {
             print(competions.count)
             snapshot.appendItems(competions, toSection: .third)
@@ -227,7 +241,7 @@ class HomeViewController: UIViewController, MetricCellDelegate, CompDataDelegate
         snapshot.appendItems([ItemType.dateItem(DateItem(theDate: 1)), ItemType.dateItem(DateItem(theDate:2)), ItemType.dateItem(DateItem(theDate:3)), ItemType.dateItem(DateItem(theDate:4)), ItemType.dateItem(DateItem(theDate:5)), ItemType.dateItem(DateItem(theDate:6)), ItemType.dateItem(DateItem(theDate:7))], toSection: .first)
         dataSource.apply(snapshot, animatingDifferences: true)
         
-        
+//        view.bringSubviewToFront(label)
     }
     
 }
@@ -272,7 +286,7 @@ extension HomeViewController {
                                heightDimension: .fractionalHeight(1)
                            )
                        )
-                       competitionGroupItem.contentInsets = NSDirectionalEdgeInsets(top: 30, leading: 20, bottom: 10, trailing: 20)
+                       competitionGroupItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
                        let competitionGroup = NSCollectionLayoutGroup.horizontal(
                            layoutSize: NSCollectionLayoutSize(
                                widthDimension: .fractionalWidth(1),
@@ -320,39 +334,45 @@ extension HomeViewController: UICollectionViewDelegate{
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
       let selectedCompetitionPage = CompetitionPage()
-        healthPlace.accessData()
-        healthPlace.getRestingHR()
-        var yoyo = dataSource.itemIdentifier(for: indexPath).self
+
+        let compData = dataSource.itemIdentifier(for: indexPath).self
         var clickedCompName: String?
-        switch yoyo {
+        switch compData {
         case .comp(let value):
-            print("sconey boney")
-            print(value.compName)
+      
             clickedCompName = value.compName
             
         default: print("didnt work")
-            clickedCompName = "Nothing"
+            clickedCompName = nil
+        }
+        
+        guard clickedCompName != nil else {
+            return
         }
         var memberlist = [CompetitionPage.Member]()
+        
         DispatchQueue.main.async  {
             DatabaseManager.shared.getListOfCompetitionMembers(compName: clickedCompName!) { item in
-               print("printing from comppage")
-                print(item)
-                print("finished printing from comppage")
                 item.forEach { member in
-                    memberlist.append(CompetitionPage.Member(username: member as! String))
+                    memberlist.append(CompetitionPage.Member(title: member as! String))
                 }
             }
         }
      
     
         updateDataSource()
-    
-        present(selectedCompetitionPage, animated: true) {
-      
-            selectedCompetitionPage.memberlist = memberlist
-            selectedCompetitionPage.updateSnapshot()
+        DispatchQueue.main.async {
+//            selectedCompetitionPage.modalPresentationStyle = .fullScreen
+            self.present(selectedCompetitionPage, animated: true) {
+            
+                selectedCompetitionPage.memberlist = memberlist
+                
+                selectedCompetitionPage.updateDataSource()
+            }
+            
         }
         
         

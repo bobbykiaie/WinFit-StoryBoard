@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Photos
+import PhotosUI
 
 
 class CompetitionHomeScreenCell: UICollectionViewCell {
@@ -32,7 +34,7 @@ class CompetitionHomeScreenCell: UICollectionViewCell {
         contentView.layer.masksToBounds = true
         contentView.layer.cornerRadius = 20
         contentView.layer.opacity = 0.8
-        contentView.backgroundColor = .systemOrange
+        contentView.backgroundColor = .secondarySystemBackground
         viewConstraints()
       
     }

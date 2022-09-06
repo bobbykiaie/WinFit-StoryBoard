@@ -21,7 +21,7 @@ class MetricCell: UICollectionViewCell {
         super.init(frame: frame)
 //        configureButton()
        
-        contentView.backgroundColor = .systemMint
+        contentView.backgroundColor = .quaternarySystemFill
         contentView.layer.cornerRadius = 20
         contentView.layer.masksToBounds = true
         configure()
@@ -50,7 +50,7 @@ class MetricCell: UICollectionViewCell {
         metricTitle.font = .preferredFont(forTextStyle: .footnote)
         metricValue.text = "200"
         metricValue.font = .systemFont(ofSize: 36)
-        metricValue.textColor = .systemPink
+        metricValue.textColor = .systemRed
 //        metricButton.configuration = .filled()
 //        metricButton.configuration?.baseForegroundColor = .white
 //        metricButton.configuration?.baseBackgroundColor = .systemRed

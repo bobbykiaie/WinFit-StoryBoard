@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
 
 final class DatabaseManager {
     static let shared = DatabaseManager()
@@ -25,6 +26,25 @@ final class DatabaseManager {
     }
     
     
+//MARK: - User Related Functions
+    public func findUser(with email: String, completion: @escaping (User?) -> Void) {
+        //Search database for user
+        let userRef = database.collection("user").whereField("email", isEqualTo: email)
+        userRef.getDocuments { snapshot, error in
+            guard let retreivedUsername = snapshot?.documents.first?.data()["username"],
+                  let retrievedEmail = snapshot?.documents.first?.data()["email"],
+                  error == nil
+            else {
+                return
+            }
+            
+            let retievedUser = User(username: retreivedUsername as! String, email: retrievedEmail as! String)
+            completion(retievedUser)
+        }
+        }
+    
+    
+//MARK: - Competition related functions
     
     public func joinCompetition(compName: String?, handler: @escaping(_ compList: NSArray) -> Void){
         guard compName != nil else {
@@ -106,56 +126,34 @@ final class DatabaseManager {
     }
     
     //function takes in an email and another function that takes in a User
-    public func findUser(with email: String, completion: @escaping (User?) -> Void) {
-        //Search database for user
-        let userRef = database.collection("user").whereField("email", isEqualTo: email)
-        userRef.getDocuments { snapshot, error in
-            guard let retreivedUsername = snapshot?.documents.first?.data()["username"],
-                  let retrievedEmail = snapshot?.documents.first?.data()["email"],
-                  error == nil
-            else {
-                return
-            }
-            
-            let retievedUser = User(username: retreivedUsername as! String, email: retrievedEmail as! String)
-            completion(retievedUser)
-        }
-            
-        
-        
-//        referance.getDocuments { snapshot, error in
-//            guard let users = snapshot?.documents. else {
-//            completion(nil)
-//                return
-//            }
-            
-        }
+
+ //MARK: - Competition page functions
     
-    public func getListOfCompetitionMembers(compName: String, handler: @escaping((Array<Any>) -> Void)) {
+    
+    public func getListOfCompetitionMembers(
+        compName: String,
+        handler: @escaping((Array<Any>) -> Void)) {
         let compRef = database.document("Competitions/\(compName)")
         compRef.getDocument { snapshot, error in
-            let theData = snapshot?.data()!["members"]
-            
-            let newData = theData.map { item in
-                item as! Array<Any>
-                
+            guard let theData = snapshot?.data() else {
+                return
             }
-        
-            handler(newData!)
-        }
-       
-       
-//        compRef.getDocument { snapshot, error in
-//            guard let members = snapshot?.data() else {
-//                print(error ?? "sniped")
-//                return
-//            }
-//            
-//            let membersList = members.compactMap { item in
-//                item
-//            }
-//            print(membersList)
-//        }
+           
+            var membersList = [String]()
+            let mapped = theData.compactMap { array in
+                array.value as? NSArray
+    
+            }
+         
+            mapped.forEach { list in
+                list.forEach { item in
+                    membersList.append(item as? String ?? "none")
+                }
+            }
+            print(membersList)
+            handler(membersList)
+
+    }
         
     }
     

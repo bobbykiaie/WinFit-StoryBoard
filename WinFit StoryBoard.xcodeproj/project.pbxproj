@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		3B0A2AE92881082D00B3FECD /* CompetitionHomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */; };
 		3B0A2AEB28810EDC00B3FECD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A2AEA28810EDC00B3FECD /* TestController.swift */; };
+		3B2E015E28B46E380014322C /* RemainingTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E015D28B46E380014322C /* RemainingTimeCell.swift */; };
+		3B2E016028B549160014322C /* MemberRankTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E015F28B549160014322C /* MemberRankTableCell.swift */; };
+		3B2E016228B57A3A0014322C /* TimeRemainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E016128B57A3A0014322C /* TimeRemainingCell.swift */; };
+		3B2E016528C6E34F0014322C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016428C6E34F0014322C /* FirebaseStorage */; };
+		3B2E016828C6E3EF0014322C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016728C6E3EF0014322C /* FirebaseAuth */; };
+		3B2E016A28C6E3EF0014322C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016928C6E3EF0014322C /* FirebaseDatabase */; };
+		3B2E016C28C6E3EF0014322C /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016B28C6E3EF0014322C /* FirebaseDatabaseSwift */; };
+		3B2E016E28C6E3EF0014322C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016D28C6E3EF0014322C /* FirebaseFirestore */; };
+		3B2E017028C6E3EF0014322C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2E016F28C6E3EF0014322C /* FirebaseStorage */; };
+		3B2E017228C6E73E0014322C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2E017128C6E73E0014322C /* StorageManager.swift */; };
 		3B312B9E2864048100784BFF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9D2864048100784BFF /* SignInVC.swift */; };
 		3B312BA028640D6200784BFF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9F28640D6200784BFF /* AuthManager.swift */; };
 		3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312BA128640DD700784BFF /* SignUpVC.swift */; };
@@ -22,7 +32,6 @@
 		3B51950428837A6000465D6B /* MetricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51950328837A6000465D6B /* MetricCell.swift */; };
 		3B5D7DE22887946600A3269F /* AddCompModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE12887946600A3269F /* AddCompModal.swift */; };
 		3B5D7DE4288B4CC400A3269F /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */; };
-		3B5D7DE6288CCDFD00A3269F /* ButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */; };
 		3B5D7DE8288D1E0B00A3269F /* CompetitionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */; };
 		3B6A4FFD281B88DD00134B6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */; };
 		3B6A5000281B8B3100134B6E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B6A4FFF281B8B3100134B6E /* FirebaseAuth */; };
@@ -34,6 +43,7 @@
 		3B6A500D281CCD3F00134B6E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A500C281CCD3F00134B6E /* UserService.swift */; };
 		3B6A500F281CD63500134B6E /* WinFitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A500E281CD63500134B6E /* WinFitUser.swift */; };
 		3B6A5011281CDCBD00134B6E /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A5010281CDCBD00134B6E /* CreateProfileViewController.swift */; };
+		3B7B605028B3001B0060135E /* MemberRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7B604F28B3001B0060135E /* MemberRankCell.swift */; };
 		3BB84AE5280B9507001BDABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB84AE4280B9507001BDABD /* AppDelegate.swift */; };
 		3BB84AE7280B9507001BDABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB84AE6280B9507001BDABD /* SceneDelegate.swift */; };
 		3BB84AE9280B9507001BDABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB84AE8280B9507001BDABD /* ViewController.swift */; };
@@ -48,6 +58,10 @@
 /* Begin PBXFileReference section */
 		3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionHomeScreenCell.swift; sourceTree = "<group>"; };
 		3B0A2AEA28810EDC00B3FECD /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		3B2E015D28B46E380014322C /* RemainingTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTimeCell.swift; sourceTree = "<group>"; };
+		3B2E015F28B549160014322C /* MemberRankTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRankTableCell.swift; sourceTree = "<group>"; };
+		3B2E016128B57A3A0014322C /* TimeRemainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingCell.swift; sourceTree = "<group>"; };
+		3B2E017128C6E73E0014322C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		3B312B9D2864048100784BFF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3B312B9F28640D6200784BFF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		3B312BA128640DD700784BFF /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -61,13 +75,13 @@
 		3B51950328837A6000465D6B /* MetricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCell.swift; sourceTree = "<group>"; };
 		3B5D7DE12887946600A3269F /* AddCompModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCompModal.swift; sourceTree = "<group>"; };
 		3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProtocols.swift; sourceTree = "<group>"; };
 		3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionPage.swift; sourceTree = "<group>"; };
 		3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B6A500C281CCD3F00134B6E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3B6A500E281CD63500134B6E /* WinFitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinFitUser.swift; sourceTree = "<group>"; };
 		3B6A5010281CDCBD00134B6E /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		3B7B604F28B3001B0060135E /* MemberRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRankCell.swift; sourceTree = "<group>"; };
 		3BB84AE1280B9507001BDABD /* WinFit StoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WinFit StoryBoard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB84AE4280B9507001BDABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BB84AE6280B9507001BDABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,33 +101,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2E016C28C6E3EF0014322C /* FirebaseDatabaseSwift in Frameworks */,
 				3B6A5007281B8B9A00134B6E /* FirebaseEmailAuthUI in Frameworks */,
 				3B6A5009281B8B9A00134B6E /* FirebaseFirestoreUI in Frameworks */,
 				3BB84B21280E5FFF001BDABD /* HealthKit.framework in Frameworks */,
 				3B6A5000281B8B3100134B6E /* FirebaseAuth in Frameworks */,
+				3B2E017028C6E3EF0014322C /* FirebaseStorage in Frameworks */,
+				3B2E016528C6E34F0014322C /* FirebaseStorage in Frameworks */,
 				3B6A5002281B8B3100134B6E /* FirebaseFirestore in Frameworks */,
+				3B2E016A28C6E3EF0014322C /* FirebaseDatabase in Frameworks */,
 				3B6A5005281B8B9A00134B6E /* FirebaseAuthUI in Frameworks */,
+				3B2E016E28C6E3EF0014322C /* FirebaseFirestore in Frameworks */,
+				3B2E016828C6E3EF0014322C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B312B6D2861732F00784BFF /* New Group */ = {
+		3B312B6D2861732F00784BFF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3B0A2AEA28810EDC00B3FECD /* TestController.swift */,
-				3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */,
+				3B312BA128640DD700784BFF /* SignUpVC.swift */,
+				3B312BC72867FB1F00784BFF /* TabBarController.swift */,
+				3B312B9D2864048100784BFF /* SignInVC.swift */,
+				3BA4B91728A8601B00ECC284 /* Cells */,
 				3B312BCB2867FBBA00784BFF /* HomeVC.swift */,
 				3B312BC3286517A600784BFF /* Extensions.swift */,
-				3B5195012882975C00465D6B /* DateCell.swift */,
-				3B51950328837A6000465D6B /* MetricCell.swift */,
 				3B5D7DE12887946600A3269F /* AddCompModal.swift */,
-				3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */,
-				3B5D7DE5288CCDFD00A3269F /* ButtonProtocols.swift */,
 				3B5D7DE7288D1E0B00A3269F /* CompetitionPage.swift */,
 			);
-			path = "New Group";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BA4B91628A85FBD00ECC284 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */,
+				3B6A5010281CDCBD00134B6E /* CreateProfileViewController.swift */,
+				3BB84AF8280B98BE001BDABD /* CompetitionPageVC.swift */,
+				3B0A2AEA28810EDC00B3FECD /* TestController.swift */,
+				3BB84AEA280B9507001BDABD /* Main.storyboard */,
+				3BB84AE8280B9507001BDABD /* ViewController.swift */,
+			);
+			path = Unused;
+			sourceTree = "<group>";
+		};
+		3BA4B91728A8601B00ECC284 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */,
+				3B5D7DE3288B4CC400A3269F /* HeaderCell.swift */,
+				3B51950328837A6000465D6B /* MetricCell.swift */,
+				3B5195012882975C00465D6B /* DateCell.swift */,
+				3B0A2AE82881082D00B3FECD /* CompetitionHomeScreenCell.swift */,
+				3B7B604F28B3001B0060135E /* MemberRankCell.swift */,
+				3B2E015D28B46E380014322C /* RemainingTimeCell.swift */,
+				3B2E015F28B549160014322C /* MemberRankTableCell.swift */,
+				3B2E016128B57A3A0014322C /* TimeRemainingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3BA4B91828A8606800ECC284 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3B312B9F28640D6200784BFF /* AuthManager.swift */,
+				3B312BC5286557C500784BFF /* DatabaseManager.swift */,
+				3BB84B23280E6973001BDABD /* HealthKit.swift */,
+				3B2E017128C6E73E0014322C /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3BA4B91928A860B900ECC284 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B6A500E281CD63500134B6E /* WinFitUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3BB84AD8280B9507001BDABD = {
@@ -136,29 +202,19 @@
 		3BB84AE3280B9507001BDABD /* WinFit StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				3B312B6D2861732F00784BFF /* New Group */,
+				3BA4B91628A85FBD00ECC284 /* Unused */,
+				3BA4B91928A860B900ECC284 /* Models */,
+				3BA4B91828A8606800ECC284 /* Managers */,
+				3B312B6D2861732F00784BFF /* Views */,
 				3BB84B1E280E5FFF001BDABD /* WinFit StoryBoard.entitlements */,
-				3B312BA128640DD700784BFF /* SignUpVC.swift */,
 				3B312BC92867FBA000784BFF /* CompetitionVC.swift */,
-				3B312B9F28640D6200784BFF /* AuthManager.swift */,
-				3BB84AF8280B98BE001BDABD /* CompetitionPageVC.swift */,
-				3B312BCF286F691F00784BFF /* CustomCellCollectionViewCell.swift */,
 				3BB84AE4280B9507001BDABD /* AppDelegate.swift */,
 				3BB84AE6280B9507001BDABD /* SceneDelegate.swift */,
-				3B312B9D2864048100784BFF /* SignInVC.swift */,
-				3BB84AE8280B9507001BDABD /* ViewController.swift */,
-				3BB84AEA280B9507001BDABD /* Main.storyboard */,
 				3B6A500A281B8D5F00134B6E /* GoogleService-Info.plist */,
 				3BB84AED280B9508001BDABD /* Assets.xcassets */,
 				3BB84AEF280B9508001BDABD /* LaunchScreen.storyboard */,
 				3BB84AF2280B9508001BDABD /* Info.plist */,
-				3BB84B23280E6973001BDABD /* HealthKit.swift */,
-				3B6A4FFC281B88DD00134B6E /* LoginViewController.swift */,
 				3B6A500C281CCD3F00134B6E /* UserService.swift */,
-				3B6A500E281CD63500134B6E /* WinFitUser.swift */,
-				3B6A5010281CDCBD00134B6E /* CreateProfileViewController.swift */,
-				3B312BC5286557C500784BFF /* DatabaseManager.swift */,
-				3B312BC72867FB1F00784BFF /* TabBarController.swift */,
 			);
 			path = "WinFit StoryBoard";
 			sourceTree = "<group>";
@@ -193,6 +249,12 @@
 				3B6A5004281B8B9A00134B6E /* FirebaseAuthUI */,
 				3B6A5006281B8B9A00134B6E /* FirebaseEmailAuthUI */,
 				3B6A5008281B8B9A00134B6E /* FirebaseFirestoreUI */,
+				3B2E016428C6E34F0014322C /* FirebaseStorage */,
+				3B2E016728C6E3EF0014322C /* FirebaseAuth */,
+				3B2E016928C6E3EF0014322C /* FirebaseDatabase */,
+				3B2E016B28C6E3EF0014322C /* FirebaseDatabaseSwift */,
+				3B2E016D28C6E3EF0014322C /* FirebaseFirestore */,
+				3B2E016F28C6E3EF0014322C /* FirebaseStorage */,
 			);
 			productName = "WinFit StoryBoard";
 			productReference = 3BB84AE1280B9507001BDABD /* WinFit StoryBoard.app */;
@@ -225,6 +287,8 @@
 			packageReferences = (
 				3B6A4FFE281B8B3100134B6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				3B6A5003281B8B9A00134B6E /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
+				3B2E016328C6E34F0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 3BB84AE2280B9507001BDABD /* Products */;
 			projectDirPath = "";
@@ -261,23 +325,27 @@
 				3B5D7DE4288B4CC400A3269F /* HeaderCell.swift in Sources */,
 				3BB84AE9280B9507001BDABD /* ViewController.swift in Sources */,
 				3B5D7DE22887946600A3269F /* AddCompModal.swift in Sources */,
-				3B5D7DE6288CCDFD00A3269F /* ButtonProtocols.swift in Sources */,
 				3B312BA228640DD700784BFF /* SignUpVC.swift in Sources */,
 				3B0A2AEB28810EDC00B3FECD /* TestController.swift in Sources */,
 				3B312B9E2864048100784BFF /* SignInVC.swift in Sources */,
 				3B312BCC2867FBBA00784BFF /* HomeVC.swift in Sources */,
 				3B312BC6286557C500784BFF /* DatabaseManager.swift in Sources */,
 				3B6A500F281CD63500134B6E /* WinFitUser.swift in Sources */,
+				3B2E015E28B46E380014322C /* RemainingTimeCell.swift in Sources */,
 				3BB84AE5280B9507001BDABD /* AppDelegate.swift in Sources */,
 				3B312BC4286517A600784BFF /* Extensions.swift in Sources */,
+				3B2E016028B549160014322C /* MemberRankTableCell.swift in Sources */,
 				3B312BCA2867FBA000784BFF /* CompetitionVC.swift in Sources */,
 				3BB84B24280E6973001BDABD /* HealthKit.swift in Sources */,
+				3B7B605028B3001B0060135E /* MemberRankCell.swift in Sources */,
 				3B312BA028640D6200784BFF /* AuthManager.swift in Sources */,
 				3B5195022882975C00465D6B /* DateCell.swift in Sources */,
+				3B2E016228B57A3A0014322C /* TimeRemainingCell.swift in Sources */,
 				3B51950428837A6000465D6B /* MetricCell.swift in Sources */,
 				3BB84AE7280B9507001BDABD /* SceneDelegate.swift in Sources */,
 				3B0A2AE92881082D00B3FECD /* CompetitionHomeScreenCell.swift in Sources */,
 				3BB84AF9280B98BE001BDABD /* CompetitionPageVC.swift in Sources */,
+				3B2E017228C6E73E0014322C /* StorageManager.swift in Sources */,
 				3B5D7DE8288D1E0B00A3269F /* CompetitionPage.swift in Sources */,
 				3B312BD0286F691F00784BFF /* CustomCellCollectionViewCell.swift in Sources */,
 			);
@@ -509,6 +577,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B2E016328C6E34F0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3B6A4FFE281B8B3100134B6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -528,6 +612,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B2E016428C6E34F0014322C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016328C6E34F0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3B2E016728C6E3EF0014322C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3B2E016928C6E3EF0014322C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3B2E016B28C6E3EF0014322C /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		3B2E016D28C6E3EF0014322C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3B2E016F28C6E3EF0014322C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2E016628C6E3EF0014322C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		3B6A4FFF281B8B3100134B6E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B6A4FFE281B8B3100134B6E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
