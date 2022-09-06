@@ -49,12 +49,12 @@ class ViewController: UIViewController {
     
    
     @IBAction func changeSteps(_ sender: UIButton, forEvent event: UIEvent)  {
-       
-        healthPlace.getRestingHR()
-        healthPlace.latestHeartRate()
-        theSteps.text = String(healthPlace.recentHeartRate)
-        restingHRLabel.text = String(healthPlace.restHR)
-        
+//       
+//        healthPlace.getRestingHR()
+//        healthPlace.latestHeartRate()
+//        theSteps.text = String(healthPlace.recentHeartRate)
+//        restingHRLabel.text = String(healthPlace.restHR)
+//        
     }
     
     

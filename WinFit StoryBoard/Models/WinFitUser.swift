@@ -12,4 +12,7 @@ struct WinFitUser {
     
     var userId: String?
     var username: String?
+    var enrolledCompetitions: [String]?
+    var numOfCompsWon: Int?
+    
 }

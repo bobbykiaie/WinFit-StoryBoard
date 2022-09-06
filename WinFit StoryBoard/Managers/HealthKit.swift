@@ -20,10 +20,19 @@ class HealthStore {
         if HKHealthStore.isHealthDataAvailable() {
             
             healthStore = HKHealthStore()
+        } else {
+            return
         }
-        accessData()
-        
+             self.accessData()
+            self.getRestingHR()
+            self.getSteps { num in
+               
+                self.recentSteps = num
+            }
+
     }
+    
+    
     func accessData() {
         let read = Set(
             [HKObjectType.quantityType(forIdentifier: .heartRate)!,
@@ -67,6 +76,10 @@ class HealthStore {
        
       
         let query = HKSampleQuery(sampleType: restingHRType!, predicate: nil, limit: 5, sortDescriptors: nil) { query, results, error in
+            guard results != nil else {
+                self.restHR = 59
+                return
+            }
             if (results == nil) {
                 print("no Results")
             }
@@ -77,10 +90,47 @@ class HealthStore {
             let unit = HKUnit(from: "count/min")
             let restingHR = data.quantity.doubleValue(for: unit)
 //            print(restingHR)
+            guard restingHR > 0  else {
+                return
+            }
             self.restHR = restingHR
             
         }
         
+         healthStore?.execute(query)
+ 
+        
+    }
+    
+    func getSteps(completion: @escaping(Double) -> Void) {
+        
+        let sampleType = HKQuantityType(.stepCount)
+  
+        let startDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        let startOfDay = Calendar.current.startOfDay(for: Date())
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date())
+        
+        let query = HKStatisticsCollectionQuery(quantityType: sampleType, quantitySamplePredicate: nil, options: .cumulativeSum, anchorDate: startOfDay, intervalComponents: DateComponents(day: 1))
+        query.initialResultsHandler = { _, result, error in
+            guard result != nil else {
+                completion(55)
+                return
+            }
+                var resultCount = 0.0
+                result!.enumerateStatistics(from: startOfDay, to: Date()) { statistics, _ in
+                if let sum = statistics.sumQuantity() {
+                    // Get steps (they are of double type)
+                    resultCount = sum.doubleValue(for: HKUnit.count())
+                    
+                    
+                } // end if
+                // Return
+                    completion(resultCount.rounded())
+                    
+            }
+            
+        }
         healthStore?.execute(query)
         
     }
